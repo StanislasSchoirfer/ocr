@@ -198,11 +198,11 @@ function register_jquery() {
 function ocr_wp_scripts() {
 	wp_enqueue_style( 'ocr-bootstrap-styles', get_template_directory_uri() . '/bower_components/bootstrap/css/bootstrap-flex.min.css', array(), '4.a2', 'all' );
 
-	wp_enqueue_style( 'ocr-roboto-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/roboto.min.css', array(), '', 'all' );
+	// wp_enqueue_style( 'ocr-roboto-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/roboto.min.css', array(), '', 'all' );
 
 	// wp_enqueue_style( 'ocr-material-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/material-fullpalette.min.css', array(), '', 'all' );
 
-	wp_enqueue_style( 'ocr-ripples-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/ripples.min.css', array(), '', 'all' );
+	// wp_enqueue_style( 'ocr-ripples-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/ripples.min.css', array(), '', 'all' );
 
 	wp_enqueue_style( 'ocr_wp-style', get_stylesheet_uri() );
 
@@ -210,7 +210,7 @@ function ocr_wp_scripts() {
 	
 	wp_enqueue_script('theter', "//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js", array('jquery'), '1.3.1', true);
 
-	wp_enqueue_script( 'ocr-ripples-js', get_template_directory_uri() . '/bower_components/bmd/dist/js/ripples.min.js', array('jquery'), '', true );
+	// wp_enqueue_script( 'ocr-ripples-js', get_template_directory_uri() . '/bower_components/bmd/dist/js/ripples.min.js', array('jquery'), '', true );
 
 	// wp_enqueue_script( 'ocr-material-js', get_template_directory_uri() . '/bower_components/bmd/dist/js/material.min.js', array('jquery'), '', true );
 
@@ -231,7 +231,10 @@ function ocr_wp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ocr_wp_scripts' );
 
-
+//Soil clean up
+add_theme_support('soil-nice-search');
+add_theme_support('soil-relative-urls');
+add_theme_support('soil-disable-trackbacks');
 //remove hard width and height
 add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );

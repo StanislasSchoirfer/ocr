@@ -21,20 +21,20 @@ get_header(); ?>
 	
 		$options = get_option('activite_options');  
 		$from =  $options['email_to_send']; 
-		$activite = htmlentities($_REQUEST['activite']);
+		$activite = $_REQUEST['send_activite'];
 		$prenom = htmlentities($_REQUEST['prenom']);
 		$nom = htmlentities($_REQUEST['nom']);
 		$personne  = htmlentities($_REQUEST['adresse']);
-		$subject= "[inscription] à ".$activite ." [" .$ID ."]" ;
-		$message= $prenom . ' '. $nom. ' souhaite s\'inscrire à l\'activité ' . ' ' . $activite . '\n';
+		$subject= "[inscription] à ".$activite  ;
+		$message= $prenom . ' '. $nom. ' souhaite s\'inscrire à l\'activité ' . ' ' . $activite . "\r\n";
 		$message .= 'adresse de contact : ' . $personne;
-		$headers = 'From: Conatc mairie <' . $from .'>' . "\r\n";
+		$headers = 'From: Contact mairie <' . $from .'>' . "\r\n";
 		
 		//wp_mail ( string|array $to, string $subject, string $message, string|array $headers = '', string|array $attachments = array() )
 		$sendToMairie = wp_mail($from, $subject, $message, $headers);
 		if($sendToMairie) {
-		$confirmation = "Nous avons bien recu votre demande d\'inscription";
-		$msg = 'Votre de mande est ' . $message;
+		$confirmation = "Nous avons bien recu votre demande d'inscription";
+		$msg = 'Votre demande est : ' . $message;
 			wp_mail($personne, $confirmation, $msg, $headers);
 			$success = true;
 		}

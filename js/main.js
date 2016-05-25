@@ -63,16 +63,16 @@ var youtube = function () {
 	});
 
 	$(window).resize(function() {
-	
-	  var newWidth = $fluidEl.width();
+	if($fluidEl){
+	  var newWidth = $fluidEl.width() ;
 	  $allVideos.each(function() {
-
-	    var $el = $(this);
-	    $el
+		 var $el = $(this);
+	     $el
 	        .width(newWidth)
 	        .height(newWidth * $el.attr('data-aspectRatio'));
 
 	  });
+	}
 
 	}).resize();
 
