@@ -11,7 +11,7 @@
 		<h4 class="card-title"><?php the_title( '<h1 class="entry-title">', '</h1>' ); ?></h4>
 			
 				<?php if ( has_post_thumbnail() ) : ?>
-				<?php  get_the_post_thumbnail( get_the_ID () , 'thumbnail' );  ?>
+				<?php  the_post_thumbnail( get_the_ID () , 'card-size' );  ?>
 				<?php endif; ?>
 			
 		</div>

@@ -242,6 +242,7 @@ function remove_width_attribute( $html ) {
 }
 
 
+
 // Adding search field in the primary nav bar
 
 add_filter('wp_nav_menu_items','add_search_box_to_menu', 10, 2);
@@ -270,6 +271,15 @@ function remove_img_attr ($html) {
 }
 
 add_filter( 'post_thumbnail_html', 'remove_img_attr' );
+
+
+//the_excerpt
+
+function excerpt_ellipse($text) {
+   return str_replace('[...]', ' <a href="'.get_permalink().'">Continuer la lecture...</a>', $text);
+}
+add_filter('get_the_excerpt', 'excerpt_ellipse');
+
 
 /** 
 *Custom email for activities registration.
