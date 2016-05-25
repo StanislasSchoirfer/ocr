@@ -8,24 +8,26 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-05-25 18:56+0100\n"
+"Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops"
 
 #: 404.php:19
-msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
-msgstr ""
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr "Il n&rsquo;y a rien à la page indiquée. Essayer un des liens suivants."
 
 #: 404.php:27
 msgid "Most Used Categories"
 msgstr ""
 
 #. translators: %1$s: smiley
-
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
@@ -121,18 +123,25 @@ msgstr ""
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Rien de trouver"
 
 #: content-none.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: content-none.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
+"Désolé, nous n&rsquo;avons rien trouvé en rapport avec les mots de votre "
+"recherche"
 
 #: content-none.php:28
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: content-page.php:18 content-single.php:20 content.php:22
@@ -204,15 +213,14 @@ msgstr ""
 #: inc/template-tags.php:82
 msgctxt "post date"
 msgid "Posted on %s"
-msgstr ""
+msgstr "publié par"
 
 #: inc/template-tags.php:87
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "par %s"
 
 #. translators: used between list items, there is a space after the comma
-
 #: inc/template-tags.php:104 inc/template-tags.php:110
 msgid ", "
 msgstr ""
@@ -239,7 +247,8 @@ msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Resultat de la recherche pour :%s"
+
 #. Theme Name of the plugin/theme
 msgid "_s"
 msgstr ""
@@ -249,7 +258,11 @@ msgid "http://underscores.me/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid ""
+"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
+"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
+"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
+"theme out there. That's what I'm here for."
 msgstr ""
 
 #. Author of the plugin/theme
