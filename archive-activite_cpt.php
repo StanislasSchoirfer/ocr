@@ -147,7 +147,7 @@ get_header(); ?>
       	<label for="prenom" name="prenom" class="form-control-label">Entrer votre prénom : </label>
         <input id="prenom" type="text" class="form-control" placeholder="prénom" required />
         
-        <label for="nom" class="form-control-label">Entrer votre adresse nom : </label>
+        <label for="nom" class="form-control-label">Entrer votre nom : </label>
         <input id="nom" name="nom" type="text" class="form-control" placeholder="nom" required/>
       </div>
       <div class="form-group col-xs-12">
