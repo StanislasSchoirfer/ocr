@@ -33,29 +33,54 @@ function ocr_page_navi($before = '', $after = '') {
 		$start_page = 1;
 	}
 		
-	echo $before.'<div class="pagination"><ul class="clearfix">'."";
+	echo $before.'<ul class="pagination pagination-sm"><li class="page-item">'."";
 	if ($paged > 1) {
-		$first_page_text = "FIRST";
-		echo '<li class="prev"><a href="'.get_pagenum_link().'" title="First">'.$first_page_text.'</a></li>';
-	}
 		
-	$prevposts = get_previous_posts_link('précedant');
-	if($prevposts) { echo '<li>' . $prevposts  . '</li>'; }
-	else { echo '<li class="disabled"><a href="#">précedant</a></li>'; }
+	echo '<li class="page-item "><a class="page-link" href="'.get_pagenum_link().'" aria-label="Previous"><span aria-hidden="true">&laquo;</span><span class="sr-only">Previous</span></a></li>';
+		
+    }
+		
+	if(1 == $paged) {
+	echo '<li class="disabled page-item"><a href="#" class="page-link">&laquo</a></li>'; 
+	}
 	
 	for($i = $start_page; $i  <= $end_page; $i++) {
 		if($i == $paged) {
-			echo '<li class="active"><a href="#">'.$i.'</a></li>';
+			echo '<li class="active page-item"><a class="page-link" href="#">'.$i.'</a></li>';
 		} else {
-			echo '<li><a href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
+			echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($i).'">'.$i.'</a></li>';
 		}
 	}
-	echo '<li class="">';
-	next_posts_link('suivant');
-	echo '</li>';
-	if ($end_page < $max_page) {
-		$last_page_text = "LAST>";
-		echo '<li class="next"><a href="'.get_pagenum_link($max_page).'" title="Last">'.$last_page_text.'</a></li>';
-	}
+	
+	
+	echo '<li class="next page-item';
+	if ($paged == $max_page)  echo ' disabled';
+	echo ' " ><a class="page-link" href="'.get_pagenum_link($max_page).'" aria-label="Next"><span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span></a></li>';
+	
 	echo '</ul></div>'.$after."";
 }
+
+
+/**
+<nav>
+  <ul class="pagination pagination-sm">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+**/

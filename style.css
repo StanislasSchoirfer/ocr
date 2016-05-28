@@ -243,7 +243,7 @@ a {
 }
 
 a:visited {
-	#141719
+	color:#141719
 	
 }
 
@@ -980,7 +980,12 @@ color:#020202;
 th[scope=row]{min-width:200px;}
 
 
+.page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover{
 
+color: #fff;
+	background-color: #e25214;
+	border-color: #e25214;
+}
 /*-------------
 14. vide bg
 ________________*/
