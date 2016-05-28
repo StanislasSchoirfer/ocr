@@ -50,3 +50,14 @@ function build_options_page() {?>  <div id="theme-options-wrap">    <div class="
  
 
 
+add_action('wp_dashboard_setup', 'my_custom_dashboard_widgets');
+
+function my_custom_dashboard_widgets() {
+global $wp_meta_boxes;
+
+wp_add_dashboard_widget('custom_help_widget', 'Theme Support', 'custom_dashboard_help');
+}
+
+function custom_dashboard_help() {
+echo '<p>En cas de problème,contacter le developpeur <a href="mailto:stanislas.schoirfer@gmail.com">ici</a></p>';
+}
