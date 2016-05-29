@@ -82,7 +82,7 @@ get_header(); ?>
 					</header><!-- .page-header -->
 
 					<div class="table-responsive">
-					<table class="table table-bordered table-hover">
+					<table class="table table-hover">
 					<?php  // table-inverse     ?>
 					<thead class="thead-inverse">
     				<tr>
@@ -90,7 +90,7 @@ get_header(); ?>
       					<th>Date</th>
       					<th>Titre</th>
       					<th>Résumé</th>
-      					<th>Plus d'infos</th>
+      					<th>Plus&nbsp;d'infos</th>
       					<th>S'inscrire</th>
     				</tr>
   					</thead>
