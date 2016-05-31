@@ -983,10 +983,12 @@ th[scope=row]{min-width:200px;}
 .page-item.active .page-link, .page-item.active .page-link:focus, .page-item.active .page-link:hover{
 
 color: #fff;
-	background-color: #e25214;
-	border-color: #e25214;
+	background-color: #d9534f;
+	border-color: #d9534f;
 }
-
+h4.card-title{
+text-transform :uppercase;
+}
 .gallery-item {
 }
 /*-------------

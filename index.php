@@ -34,7 +34,7 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php ocr_wp_paging_nav(); ?>
+				<?php ocr_page_navi(); ?>
 
 			<?php else : ?>
 
