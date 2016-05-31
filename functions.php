@@ -210,21 +210,11 @@ function register_jquery() {
 function ocr_wp_scripts() {
 	wp_enqueue_style( 'ocr-bootstrap-styles', get_template_directory_uri() . '/bower_components/bootstrap/css/bootstrap-flex.min.css', array(), '4.a2', 'all' );
 
-	// wp_enqueue_style( 'ocr-roboto-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/roboto.min.css', array(), '', 'all' );
-
-	// wp_enqueue_style( 'ocr-material-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/material-fullpalette.min.css', array(), '', 'all' );
-
-	// wp_enqueue_style( 'ocr-ripples-styles', get_template_directory_uri() . '/bower_components/bmd/dist/css/ripples.min.css', array(), '', 'all' );
-
 	wp_enqueue_style( 'ocr_wp-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ocr-bootstrap-js', get_template_directory_uri() . '/bower_components/bootstrap/dist/js/bootstrap.min.js', array('jquery', 'theter'), '4.a2', true );
 	
 	wp_enqueue_script('theter', "//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js", array('jquery'), '1.3.1', true);
-
-	// wp_enqueue_script( 'ocr-ripples-js', get_template_directory_uri() . '/bower_components/bmd/dist/js/ripples.min.js', array('jquery'), '', true );
-
-	// wp_enqueue_script( 'ocr-material-js', get_template_directory_uri() . '/bower_components/bmd/dist/js/material.min.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array('jquery'), '', true );
 
