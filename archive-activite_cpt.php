@@ -47,6 +47,8 @@ get_header(); ?>
 		
 			<?php
 			$date = date('Y-m-d', time());
+			$datePlusOneMonth = strtotime( '+1 month', time() );
+			$dateYmd =  date('Y-m-d', $datePlusOneMonth); 
 			$args = array(
 				
 				'post_type' => 'activite_cpt',
@@ -57,13 +59,23 @@ get_header(); ?>
                 'order'=>'ASC',
                 
 				'meta_query' => array(
-									array(
+				
+										//'relation' => 'AND', //default
+								
+										array(
 										'key'     => 'activite_date_date',
 										'value'   => $date,
 										'compare' => '>'
-	)
-				
-				)
+									 	),
+									 	
+										 array(
+									 	'key'     => 'activite_date_date',
+										'value'   => $dateYmd,
+										'compare' => '<='
+									 	)
+									 	
+									
+								)
 			
 			);
 			
@@ -119,7 +131,7 @@ get_header(); ?>
 					</table>
 					</div>
 
-					<?php ocr_page_navi(); ?>
+					<?php // ocr_page_navi();   no need for inscription?>
 
 				<?php else : ?>
 
